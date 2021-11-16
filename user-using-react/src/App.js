@@ -6,7 +6,7 @@ import React from "react";
 function App() {
   let [data, setData] = useState(null);
   useEffect(() => {
-    fetch('http://localhost:4000')
+    fetch('http://localhost:3000')
     .then( response => response.json())
       .then(jsonData => {setData(jsonData);})
       .catch(err => console.log(err));
@@ -16,8 +16,7 @@ function App() {
   console.log(`after callback`);
   return (
     <div>
-      {/* <h1>{data}</h1> */}
-      {data && <User users = {data} />}
+      {data && <User users = {data} setData={setData} />}
     </div>
   );
 }
