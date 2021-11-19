@@ -42,7 +42,7 @@ function User(props){
                                 <td>{user.address}</td>
                                 <td>{user.phone}</td>
                                 <td>
-                                    <a href="#editUserModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href={"#editUserModal" + user._id} className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                     <EditModal setData = {setData} user = {user} />
                                 </td>
                                 <td><button onClick={
